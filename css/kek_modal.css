@@ -1,0 +1,183 @@
+li{
+   list-style-type: none;
+}
+.button{
+    padding: 20px;
+    width: 10%;
+    background-color: #13cc66;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    margin: 10px auto;
+}
+/* Стили для подложки */
+.overlay {
+   
+    /* Скрываем подложку  */
+    opacity: 0;
+    visibility: hidden;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 20;
+    transition: .3s all;
+ }
+/* Стили для модальных окон */
+
+.modal {
+   
+   /* Скрываем окна  */
+   opacity: 0;
+   visibility: hidden;
+    
+
+   /*  Установаем ширину окна  */
+   width: 100%;
+   /*  Центрируем и задаем z-index */
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 30; /* Должен быть выше чем у подложки*/
+    
+   /*  Побочные стили   */
+   box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2); 
+   text-align: center;
+   padding: 30px;
+   border-radius: 9px;
+   background-color: #fff;
+   transition: 0.3s all;
+
+}
+ 
+ 
+ /* Стили для активных классов подложки и окна */
+ 
+ .modal.active,
+ .overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+ 
+ 
+ /* Стили для кнопки закрытия */
+ 
+.modal__cross {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    fill: #444;
+    cursor: pointer;
+}
+
+.modal_body{
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    text-align: left;
+    padding: 30px;
+}
+.shablon_info{
+    border:1px solid #12c527;
+    border-radius:5px;
+    background-color:#87f36c;
+    padding: 5px;
+}
+
+.service , .tech_file{
+    display: flex;
+    border: 1px solid rgb(141, 141, 141);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.service > label , select{
+    flex:1;
+}
+.tech_file > label, input{
+    flex:1;
+}
+label{
+    font-size: 20px;
+
+}
+select{
+    padding: 10px;
+}
+
+.input__wrapper {
+    width: 100%;
+    position: relative;
+    margin: 15px 0;
+    text-align: center;
+    flex:1;
+  }
+   
+  .input__file {
+    opacity: 1;
+    visibility: hidden;
+  }
+   
+  .input__file-icon-wrapper {
+    height: 60px;
+    width: 60px;
+    margin-right: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-right: 1px solid #fff;
+  }
+   
+  .input__file-button-text {
+    line-height: 1;
+    margin-top: 1px;
+  }
+   
+  .input__file-button {
+    width: 100%;
+    max-width: 290px;
+    height: 60px;
+    background: #1bbc9b;
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 700;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.add_order{
+    background:#eee;
+    color:#088;
+    text-decoration:none;
+    display:block;
+    width:250px;
+    text-align:center;
+    margin:20px auto;
+    padding:10px 10px;
+    transition:all 0.3s;
+    }
+.add_order:hover{
+    box-shadow:0px -5px 0 #088 inset;
+  }

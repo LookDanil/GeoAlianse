@@ -1,0 +1,160 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Montherrat,sans-serif;
+    background:url(../image/texture_dots.jpg) center top / cover;
+}
+a{
+    color: #7c9ab7 ;
+    font-weight: bold;
+    text-decoration: none;
+}
+p{
+    margin: 10px 0;
+}
+.form{
+    position: relative;
+    animation: showRight 1s;
+    z-index: 1;
+
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 0 10px 10px 0;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    flex:1;
+    margin: 0 auto;
+}
+input{
+    margin: 10px 0;
+    padding: 10px;
+    border: unset;
+    border-bottom: 2px solid #e3e3e3;
+    outline: none;
+}
+button{
+    padding: 10px;
+    background:#e3e3e3 ;
+    border: unset;
+    cursor: pointer;
+}
+.msg{
+    border: 2px solid #e7972e;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.container{
+    width: 70%;
+    margin: 25vh auto;
+    display: flex;
+}
+.main{
+    flex:1;
+    position: relative;
+    animation: showLeft 1s;
+    z-index: 1;
+    padding:50px;
+    padding-top: 100px;
+    background-color: #fff;
+    border-radius: 10px 0 0 10px;
+}
+@keyframes showLeft {
+    from {left:-100%;}
+    to {left:0;} 
+    }
+@keyframes showRight {
+from {right:-100%;}
+to {right:0;}
+
+}
+
+.logo{
+    width:50px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.mini_title{
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    font-size: 25px;
+}
+.container_reg{
+    width: 35%;
+    margin: 2.5vh 0;
+    display: flex;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    flex-direction: column;
+    position: absolute;
+    animation: showTop 1s;
+    z-index: 1;
+    right: 50%;
+    left: 35%;
+}
+.header{
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 20px;
+    color: rgb(124, 124, 124);
+}
+.form_reg{
+    padding: 10px;
+    margin: 0 auto;
+}
+@keyframes showTop {
+    from {top:-100%;}
+    to {top:0;}
+    
+    }
+    
+    @media screen and (max-width: 1040px) {
+        .container{
+            width: 70%;
+            margin: 9vh auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .main{
+            flex:1;
+            position: relative;
+            animation: showLeft 1s;
+            z-index: 1;
+            padding:10px;
+            padding-top: 100px;
+            background-color: #fff;
+            border-radius: 10px 10px 0 0;
+        }
+        .form{
+            position: relative;
+            animation: showRight 1s;
+            z-index: 1;
+            flex:1;
+            padding: 50px;
+            background-color: #fff;
+            border-radius: 0 0 10px 10px;
+        }
+        .main > h1{
+            text-transform: uppercase;
+            font-size: 20px;
+            text-align: center;
+        }
+        input, button,.regist{
+            width: 80%;
+        }
+      }
+      @media screen and (max-device-width: 400px) {
+        input, button,.regist{
+            width: 65%;
+        }
+    }
